@@ -1,0 +1,32 @@
+//colors
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
+$color-tertiary-font:#008766;
+$color-white: #FFFFFF;
+$color-background: #f7f7f7;
+$color-form-background: #EAEAEA;
+$color-dark: #353535;
+$color-dark-font: #7E7E7E;
+$color-gradient: 193.33deg, $color-primary -11.44%, $color-secondary 123.93%;
+
+//shadows
+$shadow-primary: 0px 2px 4px rgba(0, 0, 0, 0.15);
+$shadow-secondary: 0px 4px 15px rgba(0, 0, 0, 0.15);
+$shadow-btn-origin: 0px 4px 10px rgba(0, 0, 0, 0.25);
+$shadow-btn-modifier: 0px 4px 15px rgba(0, 0, 0, 0.35);
+$shadow-card: 0px 4px 15px rgba(0, 0, 0, 0.1);
+
+//layout
+$section-padding: 20px;
+
+//cubic-bezier
+$stretch: cubic-bezier(0.63,-0.36, 0.46, 1.49);
+$bounce: cubic-bezier(0.39, 0.58, 0.57, 1);
+$fastout-slowin: cubic-bezier(0.4, 0, 0.2, 1);
+
+//responsive
+$breakpoints: (
+    tablet: 768px,
+    desktop: 1024px
+)

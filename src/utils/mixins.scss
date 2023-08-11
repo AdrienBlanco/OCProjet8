@@ -1,0 +1,33 @@
+@mixin font ($f-weight: 300, $f-size: 16px){
+    font-weight: $f-weight;
+    font-size: $f-size;
+}
+
+@mixin neutral-style {
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin direction ($direction: column) {
+    display: flex;
+    flex-direction: $direction;
+}
+
+@mixin center {
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin desktop {
+    @media screen and (min-width: map-get($breakpoints, desktop)) {
+        @content; 
+    }   
+}
+
+@mixin tablet {
+    @media screen and (min-width: map-get($breakpoints, tablet)) {
+        @content; 
+    }   
+}
