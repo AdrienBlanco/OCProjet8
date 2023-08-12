@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 @mixin font ($f-weight: 300, $f-size: 16px){
     font-weight: $f-weight;
     font-size: $f-size;
@@ -20,14 +22,8 @@
     align-items: center;
 }
 
-@mixin desktop {
-    @media screen and (min-width: map-get($breakpoints, desktop)) {
-        @content; 
-    }   
-}
-
-@mixin tablet {
-    @media screen and (min-width: map-get($breakpoints, tablet)) {
+@mixin mobile {
+    @media screen and (min-width: map-get($breakpoints, mobile)) {
         @content; 
     }   
 }

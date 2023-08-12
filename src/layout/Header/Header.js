@@ -1,10 +1,11 @@
-import React from 'react'
+import LogoKasa from "../../assets/logo-kasa-primary.png";
+import Nav from "../../components/Nav/Nav";
 
-export default function Home() {
+export default function Header() {
     return (
-        <div className='test'>
-            <h1>TEst</h1>
-            <p>mais oui</p>
-        </div>
+        <header>
+            <img className="header__logo" src={LogoKasa} alt="Logo Kasa" />
+            <Nav />
+        </header>
     )
 }

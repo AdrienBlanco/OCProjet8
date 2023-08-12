@@ -1,10 +1,10 @@
-import React from 'react'
+import LogoFooter from "../../assets/logo-kasa-secondary.png";
 
-export default function Home() {
+export default function Footer() {
     return (
-        <div className='test'>
-            <h1>TEst</h1>
-            <p>mais oui</p>
-        </div>
+        <footer>
+            <img className="footer__logo" src={LogoFooter} alt="Logo Kasa" />
+            <p className="footer__txt">© 2020 Kasa. All rights reserved</p>
+        </footer>
     )
 }

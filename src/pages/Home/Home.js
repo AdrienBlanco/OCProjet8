@@ -1,10 +1,13 @@
-import React from 'react'
+import React from "react";
+import Banner from "../../components/Banner/Banner";
+import Gallery from "../../components/Gallery/Gallery";
+
 
 export default function Home() {
-    return (
-        <div className='test'>
-            <h1>TEst</h1>
-            <p>mais oui</p>
-        </div>
-    )
+  return (
+    <div className="home">
+      <Banner />
+      <Gallery />
+    </div>
+  );
 }

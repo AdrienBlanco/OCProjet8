@@ -1,10 +1,9 @@
 import React from 'react'
 
-export default function Home() {
+export default function NotFound() {
     return (
-        <div className='test'>
-            <h1>TEst</h1>
-            <p>mais oui</p>
+        <div className=''>
+            <h1>404</h1>
         </div>
     )
 }
