@@ -1,0 +1,47 @@
+.collapse__container {
+    width: 1023px;
+    margin: auto;
+    .content--active {
+        visibility: visible;
+        height: auto;
+        overflow: visible;
+        padding: 20px;
+        opacity: 1;
+    }
+    .arrow--active {
+        transition: all 500ms $fastout-slowin;
+        transform: rotate(180deg);
+    }
+}
+
+.collapse__title {
+    border-radius: 5px;
+    background-color: $color-primary;
+    color: $color-white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    height: 52px;
+    @include font;
+
+    &__arrow {
+        object-fit: none;
+        width: 32px;
+        cursor: pointer;
+    }
+
+}
+
+.collapse__content {
+    @include font(400, 18px);
+    background-color: $color-secondary;
+    color: $color-primary;
+    border-radius: 0 0 5px 5px;
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0 1rem;
+    transition: all 400ms $fastout-slowin;
+}

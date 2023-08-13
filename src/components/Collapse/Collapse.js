@@ -1,10 +1,19 @@
-import React from 'react'
+import arrow from "../../assets/arrow.png";
+import { useState } from "react";
 
-export default function Home() {
+export default function Collapse({ title, content }) {
+    const [active, setActive] = useState(false)
+
+    const handleToggle = e => {
+        setActive(!active)
+    }
+    
     return (
-        <div className='test'>
-            <h1>TEst</h1>
-            <p>mais oui</p>
+        <div className="collapse__container">
+            <div className="collapse__title" onClick={handleToggle}>
+                {title}<img className={`collapse__arrow ${active && "arrow--active"}`} src={arrow} alt="chevron" />
+            </div>
+            <div className={`collapse__content ${active && "content--active"}`}>{content}</div>
         </div>
     )
 }

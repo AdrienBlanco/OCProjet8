@@ -1,8 +1,8 @@
-@import "../../utils/variables.scss";
-
-.test {
-    color: $color-secondary;
-    p {
-        color: $color-primary;
+.about {
+    &__collapse {
+        padding: 35px 0 35px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
     }
 } 

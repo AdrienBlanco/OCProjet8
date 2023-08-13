@@ -1,11 +1,10 @@
-import React from "react";
-import datas from "../../datas/accomodations.json";
+import accomodationData from "../../datas/accomodationData.json";
 import Card from "../Card/Card";
 
 export default function Gallery() {
     return (
         <div className="gallery">
-            {datas.map(data => {
+            {accomodationData.map(data => {
                 return (
                     <Card
                         key={data.id}

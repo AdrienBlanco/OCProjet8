@@ -1,10 +1,21 @@
-import React from 'react'
+import Banner from "../../components/Banner/Banner";
+import Collapse from "../../components/Collapse/Collapse";
+import aboutData from "../../datas/aboutData.json";
 
-export default function Home() {
+export default function About() {
+
     return (
-        <div className='test'>
-            <h1>TEst</h1>
-            <p>mais oui</p>
+        <div className="about">
+            <Banner />
+            <div className="about__collapse">
+                {aboutData.map(data => (
+                    <Collapse
+                        key={data.id}
+                        title={data.title}
+                        content={data.content}
+                    />
+                ))}
+            </div>
         </div>
     )
-}
+};
