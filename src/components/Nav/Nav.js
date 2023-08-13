@@ -5,8 +5,8 @@ export default function Nav() {
 
     return (
         <nav>
-            <Link className={location.pathname === "/" ? "nav__link--active" : "nav__link"} to="/">Accueil</Link>
-            <Link className={location.pathname === "/about" ? "nav__link--active" : "nav__link"} to="/about">A Propos</Link>
+            <Link className={location.pathname === "/" ? "nav--active" : ""} to="/">Accueil</Link>
+            <Link className={location.pathname === "/about" ? "nav--active" : ""} to="/about">A Propos</Link>
         </nav>
     )
 }

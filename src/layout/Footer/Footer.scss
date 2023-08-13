@@ -1,0 +1,21 @@
+footer {
+    position: absolute;
+    left: 0;
+    background-color: $color-black;
+    width: 100%;
+    margin: auto;
+    height: 209px;
+
+    display: flex;
+    @include center;
+    @include direction;
+
+    img {
+        margin: 40px;
+    }
+
+    p {
+        color: $color-white;
+        @include font();
+    }
+}

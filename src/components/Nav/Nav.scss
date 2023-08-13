@@ -1,0 +1,14 @@
+@import "../../utils/variables.scss";
+@import "../../utils/mixins.scss";
+
+nav {
+    display: flex;
+    gap: 57px;
+    a {
+        color: $color-primary;
+        @include font(500, 24px)
+    }
+    .nav--active {
+        text-decoration: underline;
+    }
+}

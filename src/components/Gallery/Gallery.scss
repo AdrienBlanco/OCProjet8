@@ -1,0 +1,11 @@
+.gallery {
+    margin-top: 43px;
+    margin-bottom: 50px;
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 60px;
+    background-color: $color-secondary;
+    border-radius: 25px;
+}
