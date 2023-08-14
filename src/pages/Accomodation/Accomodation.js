@@ -59,7 +59,7 @@ export default function Accomodation() {
                             title={data.title}
                             pictures={data.pictures}
                         />
-                        <div className="accomodation__content">
+                        <section className="accomodation__content">
                             <div className="accomodation__titleandtags">
                                 <div className="accomodation__title">
                                     <h1>{data.title}</h1>
@@ -81,8 +81,8 @@ export default function Accomodation() {
                                     {stars}
                                 </div>
                             </div>
-                        </div>
-                        <div className="accomodation__collapse">
+                        </section>
+                        <section className="accomodation__collapse">
                             <Collapse
                                 title="Description"
                                 content={data.description}
@@ -91,7 +91,7 @@ export default function Accomodation() {
                                 title="Équipements"
                                 content={equipmentList}
                             />
-                        </div>
+                        </section>
                     </div>
                 )
             })}

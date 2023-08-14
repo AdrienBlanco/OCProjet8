@@ -13,7 +13,7 @@ export default function About() {
                 image={BannerImg}
                 alt="paysage montagneux"
             />
-            <div className="about__collapse">
+            <section className="about__collapse">
                 {aboutData.map(data => (
                     <Collapse
                         key={data.id}
@@ -21,7 +21,7 @@ export default function About() {
                         content={data.content}
                     />
                 ))}
-            </div>
+            </section>
         </div>
     )
 };

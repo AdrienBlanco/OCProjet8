@@ -3,7 +3,7 @@ import Card from "../Card/Card";
 
 export default function Gallery() {
     return (
-        <div className="gallery">
+        <section className="gallery">
             {accomodationData.map(data => {
                 return (
                     <Card
@@ -14,6 +14,6 @@ export default function Gallery() {
                     />
                 )
             })}
-        </div>
+        </section>
     )
 }

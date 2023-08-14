@@ -25,7 +25,7 @@ export default function Slideshow({ pictures, title }) {
     }
 
     return (
-        <div className="slideshow">
+        <section className="slideshow">
             <img
                 className="slideshow__img"
                 src={pictures[currentIndex]}
@@ -43,6 +43,6 @@ export default function Slideshow({ pictures, title }) {
                 alt="next slide"
                 onClick={nextSlide}
             />
-        </div>
+        </section>
     )
 }
