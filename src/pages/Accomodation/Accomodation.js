@@ -26,7 +26,7 @@ export default function Accomodation() {
     }
 
     return (
-        <div className="accomodation">
+        <div>
             {filteredData.map(data => {
 
                 document.title = `Kasa - ${data.title}`;
@@ -45,52 +45,52 @@ export default function Accomodation() {
 
                 const tags = data.tags;
                 const tagList = tags.map(tag => (
-                    <span key={tag}>{tag}</span>
+                    <li key={tag}>{tag}</li>
                 ))
 
                 const equipments = data.equipments;
                 const equipmentList = equipments.map(equipment => (
-                    <span key={equipment}>{equipment}</span>
+                    <li key={equipment}>{equipment}</li>
                 ))
 
                 return (
-                    <div key={data.id} className="accomodation__slideshow">
+                    <div key={data.id} className="accomodation">
                         <Slideshow
                             title={data.title}
                             pictures={data.pictures}
                         />
-                        <div className="accomodation__title">
-                            <h1>{data.title}</h1>
-                            <p>{data.location}</p>
-                        </div>
-                        <div className="accomodation__host">
-                            <div className="accomodation__host--layout">
-                                <p>{firstName} {lastName}</p>
-                                <img
-                                    src={data.host.picture}
-                                    alt={fullName}
-                                />
+                        <div className="accomodation__content">
+                            <div className="accomodation__titleandtags">
+                                <div className="accomodation__title">
+                                    <h1>{data.title}</h1>
+                                    <p>{data.location}</p>
+                                </div>
+                                <ul className="accomodation__tags">
+                                    {tagList}
+                                </ul>
                             </div>
-                            <div className="accomodation__rating">
-                                {stars}
+                            <div className="accomodation__hostandrating">
+                                <div className="accomodation__host">
+                                    <p>{firstName}<br />{lastName}</p>
+                                    <img
+                                        src={data.host.picture}
+                                        alt={fullName}
+                                    />
+                                </div>
+                                <div className="accomodation__rating">
+                                    {stars}
+                                </div>
                             </div>
-                        </div>
-                        <div className="accomodation__tags">
-                            {tagList}
                         </div>
                         <div className="accomodation__collapse">
-                            <div>
-                                <Collapse
-                                    title="Description"
-                                    content={data.description}
-                                />
-                            </div>
-                            <div>
-                                <Collapse
-                                    title="Équipements"
-                                    content={equipmentList}
-                                />
-                            </div>
+                            <Collapse
+                                title="Description"
+                                content={data.description}
+                            />
+                            <Collapse
+                                title="Équipements"
+                                content={equipmentList}
+                            />
                         </div>
                     </div>
                 )

@@ -6,13 +6,12 @@ import BannerImg from "../../assets/Image source 2.png";
 
 export default function About() {
     document.title = "Kasa - A Propos";
-    const alt = "paysage montagneux"
 
     return (
         <div className="about">
             <Banner
                 image={BannerImg}
-                alt={alt}
+                alt="paysage montagneux"
             />
             <div className="about__collapse">
                 {aboutData.map(data => (
