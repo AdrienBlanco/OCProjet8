@@ -1,19 +1,37 @@
 .banner {
+    height: 223px;
     position: relative;
+
+    @include mobile {
+        height: 111px;
+    }
 
     img {
         width: 100%;
-        height: 223px;
+        height: 100%;
         @include radius;
         object-fit: cover;
         filter: brightness(70%);
+
+        @include mobile {
+            height: 111px;
+            @include radius(10px);
+        }
     }
 
     h1 {
-        position: absolute;
-        top: 35%;
-        left: 22%;
         color: $color-white;
-        @include font(500, 48px)
+        @include font(500, 48px);
+        min-width: 57%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        @include mobile {
+            @include radius(10px);
+            @include font(500, 24px);
+            min-width: 65%;
+        }
     }
 }

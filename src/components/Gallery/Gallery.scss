@@ -4,8 +4,19 @@
     padding: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
     gap: 60px;
     background-color: $color-secondary;
     @include radius;
+
+    @include tablet {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr;
+        padding: 0;
+        background: none;
+        margin-top: 20px;
+        gap: 20px;
+    }
 }

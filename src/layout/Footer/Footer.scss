@@ -10,10 +10,20 @@ footer {
     
     img {
         margin: 40px;
+
+        @include mobile {
+            margin: 15px;
+        }
     }
 
     p {
         color: $color-white;
         @include font();
+
+        @include mobile {
+            @include font(500, 12px);
+            max-width: 30%;
+            text-align: center;
+        }
     }
 }

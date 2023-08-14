@@ -3,6 +3,15 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 68px;
-    margin-top: 45px;
-    margin-bottom: 45px;
+    margin: 45px 0;
+    
+    @include mobile {
+        margin: 20px 0;
+    }
+
+    img {
+        @include mobile {
+            width: 145px;
+        }
+    }
 }

@@ -1,67 +1,82 @@
 .accomodation {
+
     &__content {
         display: flex;
         justify-content: space-between;
         color: $color-primary;
     }
+
     &__titleandtags {
         @include direction;
         gap: 20px;
         padding: 25px 0;
     }
+
     &__title {
         @include direction;
         gap: 5px;
+
         h1 {
             @include font(500,36px);
         }
+
         p {
             @include font(500,18px);
         }
     }
+
     &__tags {
         display: flex;
         gap: 10px;
         color: $color-white;
         @include font(500,14px);
+
         li {
             background-color: $color-primary;
             @include radius(10px);
             padding: 4px 30px;
         }
     }
+
     &__hostandrating {
         @include direction;
         justify-content: center;
         align-items: flex-end;
         gap: 25px;
     }
+
     &__host {
         display: flex;
         align-items: center;
         gap: 10px;
+
         p {
             @include font(500,18px);
             text-align: end;
             line-height: 26px;
         }
+
         img {
             @include radius(100px);
             height: 64px;
         }
     }
+
     &__rating {
         display: flex;
         gap: 15px;
     }
+
     &__collapse {
         display: flex;
         gap: 70px;
         margin-bottom: 50px;
+
         .collapse__title {
             @include font(500,18px);
             @include radius(10px);
         }
+        
         .collapse__content {
             @include radius(0 0 10px 10px);
         }

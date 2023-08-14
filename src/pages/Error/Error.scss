@@ -4,16 +4,37 @@
     @include center;
     gap: 9em;
     padding: 5em 0 9em 0;
+
+    @include mobile {
+        gap: 7em;
+        padding-bottom: 7em;
+    }
+
     h1 {
         @include font(700,288px);
         max-height: 300px;
+
+        @include mobile {
+            @include font(700,96px);
+        }
     }
+
     p {
         @include font(500,36px);
+        text-align: center;
+
+        @include mobile {
+            @include font(500,18px);
+        }
     }
+
     a {
         @include font(500,18px);
         color: $color-primary;
         text-decoration: underline;
+
+        @include mobile {
+            @include font(500,14px);
+        }
     }
 } 
