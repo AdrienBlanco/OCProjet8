@@ -56,7 +56,6 @@ export default function Accomodation() {
                 return (
                     <div key={data.id} className="accomodation__slideshow">
                         <Slideshow
-                            id={data.id}
                             title={data.title}
                             pictures={data.pictures}
                         />

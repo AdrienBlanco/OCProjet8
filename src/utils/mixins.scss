@@ -5,6 +5,10 @@
     font-size: $f-size;
 }
 
+@mixin radius ($radius: 25px){
+    border-radius: $radius;
+}
+
 @mixin direction ($direction: column) {
     display: flex;
     flex-direction: $direction;

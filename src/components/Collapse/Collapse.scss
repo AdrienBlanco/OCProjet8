@@ -17,7 +17,7 @@
 }
 
 .collapse__title {
-    border-radius: 5px;
+    @include radius(5px);
     background-color: $color-primary;
     color: $color-white;
     display: flex;
@@ -38,7 +38,7 @@
     @include font(400, 18px);
     background-color: $color-secondary;
     color: $color-primary;
-    border-radius: 0 0 5px 5px;
+    @include radius(0 0 5px 5px);
     visibility: hidden;
     height: 0;
     opacity: 0;
