@@ -1,5 +1,10 @@
 .slideshow {
     height: 415px;
+    position: relative;
+
+    @include mobile {
+        height: 255px;
+    }
 
     &__img {
         width: 100%;
@@ -9,15 +14,20 @@
     }
 
     &__arrow {
-        position: relative;
-        top: -265px;
+        position: absolute;
+        top: 38%;
+
+        @include mobile {
+            height: 24px;
+            top: 44%;
+        }
 
         &--left {
-            left: 25px;
+            left: 2%;
         }
         
         &--right {
-            left: 1120px;
+            right: 2%;
         }
     }    
 }
