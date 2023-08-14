@@ -1,8 +1,7 @@
 .about {
     &__collapse {
         padding: 35px 0 35px 0;
-        display: flex;
-        flex-direction: column;
+        @include direction;
         gap: 30px;
     }
 } 

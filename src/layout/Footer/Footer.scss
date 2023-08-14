@@ -5,11 +5,9 @@ footer {
     width: 100%;
     margin: auto;
     height: 209px;
-
-    display: flex;
-    @include center;
     @include direction;
-
+    @include center;
+    
     img {
         margin: 40px;
     }

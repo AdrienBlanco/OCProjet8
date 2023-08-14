@@ -1,0 +1,19 @@
+.Error {
+    color: $color-primary;
+    @include direction;
+    @include center;
+    gap: 9em;
+    padding: 5em 0 9em 0;
+    h1 {
+        @include font(700,288px);
+        max-height: 300px;
+    }
+    p {
+        @include font(500,36px);
+    }
+    a {
+        @include font(500,18px);
+        color: $color-primary;
+        text-decoration: underline;
+    }
+} 

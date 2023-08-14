@@ -3,6 +3,7 @@ import Collapse from "../../components/Collapse/Collapse";
 import aboutData from "../../datas/aboutData.json";
 
 export default function About() {
+    document.title = "Kasa - A Propos";
 
     return (
         <div className="about">
