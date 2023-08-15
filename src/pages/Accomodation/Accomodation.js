@@ -9,25 +9,28 @@ import Collapse from "../../components/Collapse/Collapse";
 
 export default function Accomodation() {
 
-    const [filteredData, setFilteredData] = useState([]);
+    const [currentAccomodationData, setCurrentAccomodationData] = useState([]);
 
+    //Récupération de la partie id dans l'URL
     const { id } = useParams();
 
+    //Utilisation de useEffect pour déterminer si filtrer l'élément d'accomodationData correspondant à la page actuellement ouverte et set CurrentAccomodationData 
     useEffect(() => {
-        const currentAccomodation = accomodationData.filter((data) => data.id === id);
-        setFilteredData(currentAccomodation)
+        const filteredAccomodationData = accomodationData.filter((data) => data.id === id);
+        setCurrentAccomodationData(filteredAccomodationData)
     }, [id]);
 
-    //Redirection vers la page erreur si l'id d'accomodation n'existe pas
+    //isValidId est true si l'ID de l'URL existe dans accomodationData
     const isValidId = accomodationData.find((data) => data.id === id);
 
+    //Utilisation du composant React-router-dom Navigate pour remplacer le chemin de l'URL si isValidId est false
     if (!isValidId) {
         return <Navigate to="/Error" />;
     }
 
     return (
         <>
-            {filteredData.map(data => {
+            {currentAccomodationData.map(data => {
 
                 document.title = `Kasa - ${data.title}`;
 
