@@ -32,13 +32,13 @@ export default function Slideshow({ pictures, title }) {
                 alt={title}
             />
             <img
-                className={pictures.length <= 1 ? 'slideshow__arrow--hidden' : 'slideshow__arrow slideshow__arrow--left'}
+                className="slideshow__arrow slideshow__arrow--left"
                 src={arrowLeft}
                 alt="previous slide"
                 onClick={previousSlide}
             />
             <img
-                className={pictures.length <= 1 ? 'slideshow__arrow--hidden' : 'slideshow__arrow slideshow__arrow--right'}
+                className="slideshow__arrow slideshow__arrow--right"
                 src={arrowRight}
                 alt="next slide"
                 onClick={nextSlide}
