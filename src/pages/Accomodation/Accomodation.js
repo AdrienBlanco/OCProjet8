@@ -26,7 +26,7 @@ export default function Accomodation() {
     }
 
     return (
-        <div>
+        <>
             {filteredData.map(data => {
 
                 document.title = `Kasa - ${data.title}`;
@@ -95,6 +95,6 @@ export default function Accomodation() {
                     </div>
                 )
             })}
-        </div>
+        </>
     )
 }
