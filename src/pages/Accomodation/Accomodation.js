@@ -14,13 +14,14 @@ export default function Accomodation() {
     //Récupération de la partie id dans l'URL
     const { id } = useParams();
 
-    //Utilisation de useEffect pour déterminer si filtrer l'élément d'accomodationData correspondant à la page actuellement ouverte et set CurrentAccomodationData 
+    //Utilisation de useEffect pour filtrer l'élément d'accomodationData correspondant à la page actuellement ouverte + set CurrentAccomodationData, 
+    //au changement de l'id présent dans l'URL
     useEffect(() => {
         const filteredAccomodationData = accomodationData.filter((data) => data.id === id);
         setCurrentAccomodationData(filteredAccomodationData)
     }, [id]);
 
-    //isValidId est true si l'ID de l'URL existe dans accomodationData
+    //isValidId est true si l'id de l'URL existe dans accomodationData
     const isValidId = accomodationData.find((data) => data.id === id);
 
     //Utilisation du composant React-router-dom Navigate pour remplacer le chemin de l'URL si isValidId est false
