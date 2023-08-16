@@ -7,5 +7,5 @@ export default function Header() {
             <img src={LogoKasa} alt="Logo Kasa" />
             <Nav />
         </header>
-    )
-}
+    );
+};

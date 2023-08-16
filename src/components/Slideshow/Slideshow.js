@@ -44,5 +44,5 @@ export default function Slideshow({ pictures, title }) {
                 onClick={nextSlide}
             />
         </section>
-    )
-}
+    );
+};

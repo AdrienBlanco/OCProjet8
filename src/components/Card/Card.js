@@ -8,5 +8,5 @@ export default function Card({ id, title, cover }) {
             <div className="card--overlay"></div>
             <p>{title}</p>
         </Link>
-    )
-}
+    );
+};
