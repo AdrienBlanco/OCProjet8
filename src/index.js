@@ -4,9 +4,11 @@ import './index.scss';
 import Header from './layout/Header/Header';
 import App from './App';
 import Footer from './layout/Footer/Footer';
-import {BrowserRouter} from "react-router-dom"
+import { BrowserRouter } from "react-router-dom"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+// Render du Browser Router et des composants principaux du site
 root.render(
   <BrowserRouter>
     <Header />

@@ -3,6 +3,7 @@ import Card from "../Card/Card";
 
 export default function Gallery() {
     return (
+        // Mapping de accomodationData pour alimenter les props des composants Card de la galerie
         <section className="gallery">
             {accomodationData.map(data => {
                 return (
@@ -15,5 +16,5 @@ export default function Gallery() {
                 )
             })}
         </section>
-    )
-}
+    );
+};

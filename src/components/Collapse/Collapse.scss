@@ -18,6 +18,10 @@
         transition: all 500ms $fastout-slowin;
         transform: rotate(-180deg);
     }
+
+    .false {
+        transition: all 500ms $fastout-slowin;
+    }
 }
 
 .collapse__title {
@@ -56,7 +60,7 @@
     opacity: 0;
     overflow: hidden;
     padding: 0 1rem;
-    transition: all 400ms $fastout-slowin;
+    transition: all 500ms $fastout-slowin;
 
     @include mobile {
         @include font(500,12px);

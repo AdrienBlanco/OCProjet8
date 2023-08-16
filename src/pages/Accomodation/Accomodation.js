@@ -9,53 +9,52 @@ import Collapse from "../../components/Collapse/Collapse";
 
 export default function Accomodation() {
 
+    // Initialisation du State de currentAccomodationData sous forme de tableau
     const [currentAccomodationData, setCurrentAccomodationData] = useState([]);
 
-    //Récupération de la partie id dans l'URL
+    // Récupération de la partie id de l'URL
     const { id } = useParams();
 
-    //Utilisation de useEffect pour filtrer l'élément d'accomodationData correspondant à la page actuellement ouverte + set CurrentAccomodationData, 
-    //au changement de l'id présent dans l'URL
+    /* useEffect pour filtrer l'élément d'accomodationData correspondant à la page actuellement ouverte 
+    + set de CurrentAccomodationData, au changement de l'id présent dans l'URL */
     useEffect(() => {
         const filteredAccomodationData = accomodationData.filter((data) => data.id === id);
         setCurrentAccomodationData(filteredAccomodationData)
     }, [id]);
 
-    //isValidId est true si l'id de l'URL existe dans accomodationData
+    // défini isValidId comme true si l'id de l'URL existe dans accomodationData
     const isValidId = accomodationData.find((data) => data.id === id);
-
-    //Utilisation du composant React-router-dom Navigate pour remplacer le chemin de l'URL si isValidId est false
-    if (!isValidId) {
-        return <Navigate to="/Error" />;
-    }
 
     return (
         <>
-            {currentAccomodationData.map(data => {
-
+            {!isValidId ? <Navigate to="/Error" /> : currentAccomodationData.map(data => {
+                // Si isValidId est false, redirection vers la page Erreur grâce au composant Navigate
+                // Sinon mapping des données de currentAccomodationData
+                
                 document.title = `Kasa - ${data.title}`;
 
+                // Split du nom et du prénom de l'host
                 const fullName = data.host.name;
                 const [firstName, lastName] = fullName.split(" ");
 
-                const rating = data.rating;
-                const stars = [];
-                for (let i = 0; i < rating; i++) {
-                    stars.push(<img key={i} src={starActive} alt="full star" />);
-                }
-                for (let i = rating; i < 5; i++) {
-                    stars.push(<img key={i} src={starInactive} alt="empty star" />);
-                }
+                // Crée un tableau de 5 étoiles = Itère la création d'étoiles pleines en fonction de data.rating. Les autres étoiles créées sont vides
+                const stars = Array.from({ length: 5 }, (_, index) => (
+                    <img
+                        key={index}
+                        src={index < data.rating ? starActive : starInactive}
+                        alt={index < data.rating ? "full star" : "empty star"}
+                    />
+                ));
 
-                const tags = data.tags;
-                const tagList = tags.map(tag => (
+                // Mapping de la liste des tags
+                const tagList = data.tags.map(tag => (
                     <li key={tag}>{tag}</li>
-                ))
+                ));
 
-                const equipments = data.equipments;
-                const equipmentList = equipments.map(equipment => (
+                // Mapping de la liste des équipements
+                const equipmentList = data.equipments.map(equipment => (
                     <li key={equipment}>{equipment}</li>
-                ))
+                ));
 
                 return (
                     <div key={data.id} className="accomodation">
