@@ -6,7 +6,6 @@ import starActive from "../../assets/star-active.png";
 import starInactive from "../../assets/star-inactive.png";
 import Collapse from "../../components/Collapse/Collapse";
 
-
 export default function Accomodation() {
 
     // Initialisation du State de currentAccomodationData sous forme de tableau
@@ -99,5 +98,5 @@ export default function Accomodation() {
                 )
             })}
         </>
-    )
-}
+    );
+};
